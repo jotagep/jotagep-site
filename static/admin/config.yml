@@ -2,6 +2,8 @@ backend:
   name: github
   repo: jotagep/jotagep-site
   branch: master # Branch to update (optional; defaults to master)
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
 
 media_folder: static/img
 public_folder: /img
@@ -12,7 +14,7 @@ display_url: https://infallible-mayer-ab07c9.netlify.com/
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
-    folder: "static/posts/blog" # The path to the folder where the documents are stored
+    folder: "src/posts/blog" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
