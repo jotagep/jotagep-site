@@ -51,18 +51,14 @@ collections:
     create: true
     fields:
       - label: "Tags"
-        name: "tags"
-        widget: "list"
-        field: 
-          - label: "Tag"
-            name: tag
-            widget: select 
-            multiple: true 
-            options: 
-              - { label: "Angular", value: "ANG" }
-              - { label: "Ionic", value: "ION" }
-              - { label: "React", value: "REA" }
-              - { label: "Javascript", value: "JS"}
+        name: tags
+        widget: select 
+        multiple: true 
+        options: 
+          - { label: "Angular", value: "ANG" }
+          - { label: "Ionic", value: "ION" }
+          - { label: "React", value: "REA" }
+          - { label: "Javascript", value: "JS"}
       - {label: "Title", name: title, widget: string}
       - {label: "Caption", name: caption, widget: string}
       - {label: "Description", name: description, widget: markdown}
