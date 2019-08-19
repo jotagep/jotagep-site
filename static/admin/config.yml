@@ -46,7 +46,7 @@ collections:
   
   - name: "projects"
     label: "Projects"
-    folder: "src/pages/projects"
+    folder: "src/projects"
     slug: "{{slug}}"
     create: true
     fields:
