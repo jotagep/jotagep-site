@@ -54,7 +54,7 @@ collections:
         name: "tags"
         widget: "list"
         field: 
-          - label: Tag,
+          - label: "Tag",
             name: tag
             widget: select 
             multiple: true 
