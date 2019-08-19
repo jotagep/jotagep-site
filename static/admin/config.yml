@@ -12,6 +12,66 @@ site_url: https://infallible-mayer-ab07c9.netlify.com/
 display_url: https://infallible-mayer-ab07c9.netlify.com/
 
 collections:
+  - name: "pages"
+    label: "Pages"
+    files: 
+      - file: "src/pages/index.md"
+        label: "Home"
+        name: "home"
+        fields: 
+          - {label: "Template Key", name: templateKey, widget: hidden, default: "index-page"}
+          - {label: Title, name: title, widget: string}
+          - label: "Hero Section"
+            name: heroSection
+            widget: object
+            fields:
+              - {label: "Name", name: name, widget: string}
+              - {label: "Description", name: description, widget: string}
+              - {label: "Image", name: image, widget: image}
+      
+          - label: 'About Section'
+            name: "aboutSection"
+            widget: object
+            fields: 
+              - {label: "Title", name: title, widget: string}
+              - {label: "Subtitle", name: subtitle, widget: string}
+              - {label: "Description", name: description, widget: string}
+
+          - label: 'Work Section'
+            name : "workSection"
+            widget: object
+            fields: 
+              - {label: "Title", name: title, widget: string}
+              - {label: "Subtitle", name: subtitle, widget: string}
+  
+  - name: "projects"
+    label: "Projects"
+    folder: "src/pages/projects"
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        field: 
+          - label: Tag,
+            name: tag
+            widget: select 
+            multiple: true 
+            options: 
+              - { label: "Angular", value: "ANG" }
+              - { label: "Ionic", value: "ION" }
+              - { label: "React", value: "REA" }
+              - { label: "Javascript", value: "JS"}
+      - {label: "Title", name: title, widget: string}
+      - {label: "Caption", name: caption, widget: string}
+      - {label: "Description", name: description, widget: markdown}
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        field: {label: Image, name: image, widget: image}
+      - {label: "Order", name: order, widget: number, default: 999}
+
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
     folder: "src/posts/blog" # The path to the folder where the documents are stored

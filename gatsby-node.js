@@ -1,7 +1,16 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const { fmImagesToRelative } = require('gatsby-remark-relative-images');
+const { createFilePath } = require('gatsby-source-filesystem');
 
-// You can delete this file if you're not using it
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  fmImagesToRelative(node);
+  const { createNodeField } = actions;
+
+  if (node.internal.type === 'MarkdownRemark') {
+    const slug = createFilePath({ node, getNode, basePath: `pages` });
+    createNodeField({
+      node,
+      name: `topo`,
+      value: slug
+    })
+  }
+};
