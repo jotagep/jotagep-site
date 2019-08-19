@@ -66,8 +66,7 @@ collections:
         name: "images"
         widget: "list"
         field: {label: Image, name: image, widget: image}
-      - {label: "Order", name: order, widget: number, default: 999}
-
+        
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
     folder: "src/posts/blog" # The path to the folder where the documents are stored
