@@ -1,11 +1,13 @@
 ---
 title: My first post using Novela by Narative
 author: Jorge G.Palacin
-date: 2019-04-30
+date: 2019-04-30T00:00:00.000Z
 hero: ../img/hero.jpg
-excerpt: With the growing community interest in Gatsby, we hope to create more resources that make it easier for anyone to grasp the power of this incredible tool.
+excerpt: >-
+  With the growing community interest in Gatsby, we hope to create more
+  resources that make it easier for anyone to grasp the power of this incredible
+  tool.
 ---
-
 My first post using `@narative/gatsby-theme-novela`. Novela is built by the team at [Narative](https://narative.co), and built for everyone that loves the web.
 
 ## Headers
@@ -26,11 +28,11 @@ It is recommended to NOT use H1s as it is reserved for the article heading. Any 
 
 ## Emphasis
 
-Emphasis, aka italics, with _asterisks_ or _underscores_.
+Emphasis, aka italics, with *asterisks* or *underscores*.
 
 Strong emphasis, aka bold, with **asterisks** or **underscores**.
 
-Combined emphasis with **asterisks and _underscores_**.
+Combined emphasis with **asterisks and *underscores***.
 
 Strikethrough uses two tildes. ~~Scratch this.~~
 
@@ -40,11 +42,9 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 2. Another item
 3. Actual numbers don't matter, just that it's a number
 
-- Unordered list can use asterisks
-
+* Unordered list can use asterisks
 * Or minuses
-
-- Or pluses
+* Or pluses
 
 ## Links
 
@@ -52,23 +52,17 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
 
-[I'm a reference-style link][arbitrary case-insensitive reference text]
+[I'm a reference-style link](https://www.mozilla.org)
 
 [I'm a relative reference to a repository file](../blob/master/LICENSE)
 
-[You can use numbers for reference-style link definitions][1]
+[You can use numbers for reference-style link definitions](http://slashdot.org)
 
-Or leave it empty and use the [link text itself].
+Or leave it empty and use the [link text itself](http://www.reddit.com).
 
-URLs and URLs in angle brackets will automatically get turned into links.
-http://www.example.com or <http://www.example.com> and sometimes
-example.com (but not on Github, for example).
+URLs and URLs in angle brackets will automatically get turned into links. http://www.example.com or <http://www.example.com> and sometimes example.com (but not on Github, for example).
 
 Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
 
 ## Images
 
@@ -110,8 +104,7 @@ export default props => (
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.
 
-> Blockquotes are very handy in email to emulate reply text.
-> This line is part of the same quote.
+> Blockquotes are very handy in email to emulate reply text. This line is part of the same quote.
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
 
@@ -121,10 +114,10 @@ Horizontal Rule
 
 Three or more...
 
----
+- - -
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
 
----
+- - -
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
