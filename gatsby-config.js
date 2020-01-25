@@ -1,89 +1,60 @@
 module.exports = {
   siteMetadata: {
     title: `JOTAGEP - Front End Developer`,
+    name: `Jotagep`,
+    siteUrl: `https://jotagep.netlify.com`,
     description: `Website personal sobre desarrollo web y javascript`,
     author: `@jotagep`,
+    hero: {
+      heading: `Welcome to Novela, the simplest way to start publishing with Gatsby.`,
+      maxWidth: 652,
+    },
+    social: [
+      {
+        name: `twitter`,
+        url: `https://twitter.com/Sir_JotaG`,
+      },
+      {
+        name: `github`,
+        url: `https://github.com/jotagep`,
+      },
+    ],
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/static/img`,
-        name: 'uploads',
-      },
+        path: `${__dirname}/content/img`,
+        name: 'uploads'
+      }
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "@narative/gatsby-theme-novela",
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/projects`,
-        name: 'projects',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/posts`,
-        name: 'post',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/img`,
-        name: 'images',
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-relative-images',
-            options: {
-              name: 'uploads',
-            },
-          },
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 2048,
-            },
-          },
-          {
-            resolve: 'gatsby-remark-copy-linked-files',
-            options: {
-              destinationDir: 'static',
-            },
-          },
-        ],
+        contentPosts: "content/posts",
+        contentAuthors: "content/authors",
+        rootPath: "/",
+        basePath: "/",
+        authorsPage: true,
+        mailchimp: false,
+        sources: {
+          local: true,
+          contentful: false,
+        },
       },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Jotagep's Website`,
-        short_name: `Jotagep`,
+        name: `Jotagep starter Website`,
+        short_name: `Jotagep starter`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `standalone`,
-        icon: `src/img/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `${__dirname}/static/favicon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-offline`,
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
@@ -91,5 +62,5 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
-  ],
+  ]
 }

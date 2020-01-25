@@ -3,7 +3,7 @@
  * extension registration methods, such as `registerWidget` and
  * `registerPreviewTemplate`.
  */
-import CMS from "netlify-cms-app"
+import CMS from "netlify-cms-app";
 
 /**
  * Any imported styles will automatically be applied to the editor preview
