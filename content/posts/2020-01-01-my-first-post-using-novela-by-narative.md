@@ -1,7 +1,7 @@
 ---
 title: My first post using Novela by Narative
 author: Jorge G.Palacin
-date: 2019-04-30T00:00:00.000Z
+date: 2019-04-30
 hero: ../img/hero.jpg
 excerpt: >-
   With the growing community interest in Gatsby, we hope to create more

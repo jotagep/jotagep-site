@@ -29,12 +29,19 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/projects`,
+        name: 'projects'
+      }
+    },
+    {
       resolve: "@narative/gatsby-theme-novela",
       options: {
         contentPosts: "content/posts",
         contentAuthors: "content/authors",
         rootPath: "/",
-        basePath: "/",
+        basePath: "/blog",
         authorsPage: true,
         mailchimp: false,
         sources: {
