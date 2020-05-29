@@ -1,12 +1,10 @@
 - name: Jorge G.Palacin
   bio: |
-    Written by You. This is where your author bio lives. Share your work, your
-    joys and of course, your Twitter handle.
-  avatar: ./avatars/dennis-brotzky.jpg
+    El desarrollador de aplicaciones web & móvil con más flow de todo internet.
+  avatar: ./avatars/avatar.jpg
   social:
-    - url: https://unsplash.com
-    - url: https://stackoverflow.com
-    - url: https://github.com
-    - url: https://github.com
-    - url: https://github.com
+    - url: https://www.linkedin.com/in/jotagep/
+    - url: https://www.instagram.com/jg.palacin/
+    - url: https://github.com/jotagep
+
   featured: true

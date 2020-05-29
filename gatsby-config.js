@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `JOTAGEP - Front End Developer`,
+    title: `Jotagep - Web & Mobile Developer`,
     name: `Jotagep`,
     siteUrl: `https://jotagep.netlify.com`,
-    description: `Website personal sobre desarrollo web y javascript`,
+    description: `Jotagep es la web mejor sobre desarrollo móvil y web de habla hispana. Contenido sobre Flutter, React, Vue, Gatsby y mucho más en español`,
     author: `@jotagep`,
     hero: {
-      heading: `Welcome to Novela, the simplest way to start publishing with Gatsby.`,
+      heading: `Bienvenidos a jotagep, posiblemente el mejor blog sobre desarrollo web & móvil.`,
       maxWidth: 652,
     },
     social: [
@@ -18,14 +18,20 @@ module.exports = {
         name: `github`,
         url: `https://github.com/jotagep`,
       },
+      {
+        name: `youtube`,
+        url: `https://www.youtube.com/channel/UCfEnVdbamDIjezK-22kXC9Q`,
+      },
     ],
   },
   plugins: [
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/img`,
-        name: 'uploads'
+        path: `${__dirname}/src/img`,
+        name: 'img'
       }
     },
     {
@@ -53,13 +59,22 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Jotagep starter Website`,
-        short_name: `Jotagep starter`,
+        name: `Jotagep Website`,
+        short_name: `Jotagep`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#fff`,
+        theme_color: `#7BCDF4`,
         display: `standalone`,
         icon: `${__dirname}/static/favicon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-NNKCTM5",
+        defaultDataLayer: { platform: "web" },
+        // DEBUG
+        // includeInDevelopment: true,
       },
     },
     {
