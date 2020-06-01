@@ -30,6 +30,7 @@ interface HelmetProps {
   canonical?: string;
   published?: string;
   timeToRead?: string;
+  isArticle?: boolean;
 }
 
 const seoQuery = graphql`
@@ -38,8 +39,10 @@ const seoQuery = graphql`
       edges {
         node {
           siteMetadata {
+            name
             description
             social {
+              name
               url
             }
             siteUrl
@@ -76,6 +79,7 @@ const SEO: React.FC<HelmetProps> = ({
   published,
   pathname,
   timeToRead,
+  isArticle = true
 }) => {
   const results = useStaticQuery(seoQuery);
   const site = results.allSite.edges[0].node.siteMetadata;
@@ -86,8 +90,6 @@ const SEO: React.FC<HelmetProps> = ({
 
   // If no image is provided lets looks for a default novela static image
   image = image ? image : '/preview.jpg';
-
-  console.log(fullURL(pathname));
 
   const metaTags = [
     { charset: 'utf-8' },
@@ -123,8 +125,9 @@ const SEO: React.FC<HelmetProps> = ({
     },
 
     { property: 'og:title', content: title || site.title },
-    { property: 'og:url', content: url },
+    { property: 'og:url', content: fullURL(pathname) },
     { property: 'og:image', content: fullURL(image) },
+    { property: 'og:type', content: isArticle ? 'article':'website'},
     { property: 'og:description', content: description || site.description },
     { property: 'og:site_name', content: site.name },
   ];
@@ -145,6 +148,7 @@ const SEO: React.FC<HelmetProps> = ({
       script={themeUIDarkModeWorkaroundScript}
       meta={metaTags}
     >
+      {fullURL(pathname) ? <link rel="canonical" href={fullURL(pathname)} /> : null}
       <link
         href="https://fonts.googleapis.com/css?family=Merriweather:700,700i&display=swap"
         rel="stylesheet"

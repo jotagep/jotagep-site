@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `Jotagep - Web & Mobile Developer`,
-    name: `Jotagep`,
-    siteUrl: `https://jotagep.netlify.com`,
+    name: `@Sir_JotaG`,
+    siteUrl: `https://jotagep.com`,
     description: `Jotagep es la web mejor sobre desarrollo móvil y web de habla hispana. Contenido sobre Flutter, React, Vue, Gatsby y mucho más en español`,
-    author: `@jotagep`,
+    author: `@Sir_JotaG`,
     hero: {
       heading: `Bienvenidos a jotagep, posiblemente el mejor blog sobre desarrollo web & móvil.`,
       maxWidth: 652,

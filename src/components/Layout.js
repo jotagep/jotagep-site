@@ -25,7 +25,7 @@ export default function Layout({
   return (
     <ArticlesContextProvider>
       <Container>
-        <SEO />
+        <SEO isArticle={false} />
         <Global styles={globalStyles} />
         <Header />
         <main>

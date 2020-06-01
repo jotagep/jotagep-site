@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from '@emotion/styled';
-import Img from "gatsby-image";
 import { useColorMode } from "theme-ui";
 
 import ExternalLink from '../components/ExternalLink';
