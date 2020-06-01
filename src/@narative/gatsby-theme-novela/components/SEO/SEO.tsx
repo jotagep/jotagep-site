@@ -148,6 +148,7 @@ const SEO: React.FC<HelmetProps> = ({
       script={themeUIDarkModeWorkaroundScript}
       meta={metaTags}
     >
+      <meta name="robots" content="index, follow"/>
       {fullURL(pathname) ? <link rel="canonical" href={fullURL(pathname)} /> : null}
       <link
         href="https://fonts.googleapis.com/css?family=Merriweather:700,700i&display=swap"
