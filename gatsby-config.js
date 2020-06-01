@@ -69,6 +69,48 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+  
+            allSitePage {
+              nodes {
+                path
+                context {
+                  index
+                }
+              }
+            }
+        }`,
+        resolveSiteUrl: ({site}) => {
+          return site.siteMetadata.siteUrl;
+        },
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.nodes.map(node => {
+            let priority = null;
+
+            if (node.path === '/') {
+              priority = 1.0;
+            } else {
+              priority= 0.8;
+            }
+
+            return {
+              url: `${site.siteMetadata.siteUrl}${node.path}`,
+              changefreq: 'weekly',
+              priority: priority,
+            }
+          })
+      }
+    },
+    {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: "GTM-NNKCTM5",
