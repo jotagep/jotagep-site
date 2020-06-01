@@ -90,24 +90,13 @@ const SEO: React.FC<HelmetProps> = ({
 
   // If no image is provided lets looks for a default novela static image
   image = image ? image : '/preview.jpg';
+  
+  const finalDescription = description || site.description;
 
   const metaTags = [
-    { charset: 'utf-8' },
     {
-      'http-equiv': 'X-UA-Compatible',
-      content: 'IE=edge',
-    },
-    {
-      name: 'viewport',
-      content: 'width=device-width, initial-scale=1',
-    },
-    {
-      name: 'theme-color',
-      content: '#fff',
-    },
-    {
-      rel: 'canonical',
-      href: fullURL(pathname),
+      name: 'robots',
+      content: 'index, follow'
     },
     { itemprop: 'name', content: title || site.title },
     { itemprop: 'description', content: description || site.description },
@@ -148,7 +137,6 @@ const SEO: React.FC<HelmetProps> = ({
       script={themeUIDarkModeWorkaroundScript}
       meta={metaTags}
     >
-      <meta name="robots" content="index, follow"/>
       {fullURL(pathname) ? <link rel="canonical" href={fullURL(pathname)} /> : null}
       <link
         href="https://fonts.googleapis.com/css?family=Merriweather:700,700i&display=swap"

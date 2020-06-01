@@ -13,9 +13,9 @@ export default function Logo({fill}) {
     <>
     {
       isDark ?
-      <LogoImage src={LogoBrand} isDark />
+      <LogoImage src={LogoBrand} isDark alt="Logo Dark" />
       :
-      <LogoImage src={LogoDarkBrand} isDark />
+      <LogoImage src={LogoDarkBrand} isDark alt="Logo Light" />
     }
     </>
   )
