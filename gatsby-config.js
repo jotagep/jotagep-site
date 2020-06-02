@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Jotagep - Web & Mobile Developer`,
-    name: `@Sir_JotaG`,
+    name: `Jotagep`,
     siteUrl: `https://jotagep.com`,
     description: `Jotagep es la web mejor sobre desarrollo móvil y web de habla hispana. Contenido sobre Flutter, React, Vue, Gatsby y mucho más en español`,
     author: `@Sir_JotaG`,

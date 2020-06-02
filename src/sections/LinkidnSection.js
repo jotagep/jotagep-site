@@ -15,7 +15,7 @@ export default function LinkidnSection({title}) {
     query {
       image: file(relativePath: { eq: "linkidn.png" }) {
         childImageSharp {
-          fixed(width: 201, height: 80) {
+          fixed(width: 201, height: 80, quality: 100) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
@@ -32,7 +32,7 @@ export default function LinkidnSection({title}) {
             <Img fixed={data.image.childImageSharp.fixed} alt="People" />
           </div>
           <WrapperText>     
-            Si estas interesad@ en conocer más mi entorno laboral y trayectoria profesional, puedes visitar mi perfil de <ExternalLink href="#">Linkedin</ExternalLink>  
+            Si estas interesad@ en conocer más mi entorno laboral y trayectoria profesional, puedes visitar mi perfil de <ExternalLink href="https://www.linkedin.com/in/jotagep/">Linkedin</ExternalLink>  
           </WrapperText>
         </Row>
       </Container>

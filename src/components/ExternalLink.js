@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-export default function ExternalLink({children, color}) {
+export default function ExternalLink({children, color, ...props}) {
   return (
-    <Anchor {...color  && {className: color}} >
+    <Anchor {...color  && {className: color}} {...props} >
       <span>{children}</span>
     </Anchor>
   )

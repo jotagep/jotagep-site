@@ -16,7 +16,7 @@ export default function ContactSection() {
   return (
     <CustomSection>
         <Text isDark={isDark}>
-          ¿Quieres plantearme algún proyecto o simplemente saludarme 👋?<br /> Puedes hacerlo mediante <ExternalLink href="mailto:jotagmzn@gmail.com">email</ExternalLink>,
+          ¿Quieres plantearme algún proyecto o simplemente saludarme 👋?<br /> Puedes hacerlo mediante <ExternalLink href="mailto:jotagmzn@gmail.com" target="_top">email</ExternalLink>,
           a traves de <ExternalLink color="blue" href="https://twitter.com/Sir_JotaG">twitter</ExternalLink> o dejandome un comentario en mi canal de <ExternalLink color="red" href="https://www.youtube.com/channel/UCfEnVdbamDIjezK-22kXC9Q">youtube</ExternalLink>
         </Text>
     </CustomSection>
