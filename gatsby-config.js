@@ -3,7 +3,7 @@ module.exports = {
     title: `Jotagep - Web & Mobile Developer`,
     name: `Jotagep`,
     siteUrl: `https://jotagep.com`,
-    description: `Jotagep es la web mejor sobre desarrollo móvil y web de habla hispana. Contenido sobre Flutter, React, Vue, Gatsby y mucho más en español`,
+    description: `Jotagep es el mejor sitio sobre desarrollo móvil y web de habla hispana. Contenido sobre Flutter, React, Vue, Gatsby y mucho más en español`,
     author: `@Sir_JotaG`,
     hero: {
       heading: `Bienvenidos a jotagep, posiblemente el mejor blog sobre desarrollo web & móvil.`,
