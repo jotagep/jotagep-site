@@ -9,7 +9,7 @@
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
     "@narative/gatsby-theme-novela": "^0.*",
-    "gatsby": "^2.13.41",
+    "gatsby": "^4.25.7",
     "gatsby-plugin-google-tagmanager": "^2.3.3",
     "gatsby-plugin-manifest": "^2.2.4",
     "gatsby-plugin-netlify": "^2.1.30",
